@@ -4,7 +4,7 @@
 
 |Tag|Product|Version|Release date|
 |--- |--- |--- |---|
-|latest|Azure SQL Edge<br/>PowerShell<br/>sqlcmd-arm64|15.0.2000.1562<br/>7.2.1<br/>0.1.0|2022-01-15<br>2021-12-14<br/>2022-05-05|
+|latest|Azure SQL Edge<br/>PowerShell<br/>sqlcmd-arm64|15.0.2000.1562<br/>7.2.1<br/>0.1.0|2022-01-15<br>2021-12-14<br/>2022-05-06|
 
 ## Configuration
 Requires the following environment flags:

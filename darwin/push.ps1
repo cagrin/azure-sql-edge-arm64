@@ -1,0 +1,1 @@
+docker push cagrin/azure-sql-edge-arm64:latest

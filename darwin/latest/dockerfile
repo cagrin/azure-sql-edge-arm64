@@ -14,6 +14,6 @@ RUN pwsh -Command Install-Module -Name SqlServer -Force
 
 # https://github.com/cagrin/sqlcmd-arm64
 RUN mkdir -p /opt/mssql-tools/bin \
-&& curl -sSL -o /opt/mssql-tools/bin/sqlcmd.c https://raw.githubusercontent.com/cagrin/sqlcmd-arm64/main/src/sqlcmd.c \
+&& curl -sSL -o /opt/mssql-tools/bin/sqlcmd.c https://raw.githubusercontent.com/cagrin/sqlcmd-arm64/0.1.0/darwin/src/sqlcmd.c \
 && apt update && apt install -y gcc \
 && gcc /opt/mssql-tools/bin/sqlcmd.c -o /opt/mssql-tools/bin/sqlcmd
