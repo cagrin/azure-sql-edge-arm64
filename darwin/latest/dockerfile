@@ -7,13 +7,11 @@ RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell
 && mkdir -p /opt/microsoft/powershell/7 \
 && tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 \
 && chmod +x /opt/microsoft/powershell/7/pwsh \
-&& ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
-
+&& ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh \
 # https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15
-RUN pwsh -Command Install-Module -Name SqlServer -Force
-
+&& pwsh -Command Install-Module -Name SqlServer -Force \
 # https://github.com/cagrin/sqlcmd-arm64
-RUN mkdir -p /opt/mssql-tools/bin \
+&& mkdir -p /opt/mssql-tools/bin \
 && curl -sSL -o /opt/mssql-tools/bin/sqlcmd.c https://raw.githubusercontent.com/cagrin/sqlcmd-arm64/0.1.0/darwin/src/sqlcmd.c \
-&& apt update && apt install -y gcc \
+&& apt update && apt upgrade -y && apt install -y gcc \
 && gcc /opt/mssql-tools/bin/sqlcmd.c -o /opt/mssql-tools/bin/sqlcmd
