@@ -9,12 +9,7 @@
 |--- |--- |--- |---|
 |latest|Azure SQL Edge<br/>PowerShell<br/>sqlcmd-arm64|15.0.2000.1562<br/>7.2.1<br/>0.1.0|2022-01-15<br>2021-12-14<br/>2022-02-06|
 
-## Configuration
-Requires the following environment flags:
-- ```ACCEPT_EULA=Y```
-- ```MSSQL_SA_PASSWORD=```
-
-This image is based on ```mcr.microsoft.com/azure-sql-edge:latest```.
+## Usage
 
 Unfortunatelly ```sqlcmd``` tool is not available inside the ARM64 version of SQL Edge containers<sup>1</sup>, that is why this image contains installed PowerShell<sup>2</sup> with SqlServer<sup>3</sup> modul and custom version of ```sqlcmd-arm64```<sup>4</sup>.
 
@@ -26,6 +21,13 @@ or
 * ```/opt/mssql-tools/bin/sqlcmd```
 
 inside ARM64 version of Azure SQL Edge container, tadam.
+
+## Configuration
+Requires the following environment flags:
+- ```ACCEPT_EULA=Y```
+- ```MSSQL_SA_PASSWORD=```
+
+This image is based on ```mcr.microsoft.com/azure-sql-edge:latest```.
 
 ## References
 
