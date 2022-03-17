@@ -11,7 +11,7 @@
 
 ## Usage
 
-Unfortunatelly ```sqlcmd``` tool is not available inside the ARM64 version of SQL Edge containers<sup>1</sup>, that is why this image contains installed PowerShell<sup>2</sup> with SqlServer<sup>3</sup> modul and custom version of ```sqlcmd-arm64```<sup>4</sup>.
+Unfortunatelly ```sqlcmd``` tool is not available inside the ARM64 version of SQL Edge containers<sup>1</sup>, that is why this image contains installed PowerShell<sup>2</sup> with SqlServer<sup>3</sup> module and custom version of ```sqlcmd-arm64```<sup>4</sup>.
 
 Now you can use:
 
@@ -26,8 +26,6 @@ inside ARM64 version of Azure SQL Edge container, tadam.
 Requires the following environment flags:
 - ```ACCEPT_EULA=Y```
 - ```MSSQL_SA_PASSWORD=```
-
-This image is based on ```mcr.microsoft.com/azure-sql-edge:latest```.
 
 ## References
 
