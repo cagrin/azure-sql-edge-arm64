@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/azure-sql-edge:1.0.6
 USER root
 # https://github.com/cagrin/sqlcmd-arm64
 RUN mkdir -p /opt/mssql-tools/bin \
-&& curl -sSL -o /opt/mssql-tools/bin/sqlcmd.c https://raw.githubusercontent.com/cagrin/sqlcmd-arm64/0.1.0/darwin/src/sqlcmd.c \
+&& curl -sSL -o /opt/mssql-tools/bin/sqlcmd.c https://raw.githubusercontent.com/cagrin/sqlcmd-arm64/0.1.1/darwin/src/sqlcmd.c \
 && apt update && apt upgrade -y && apt install -y gcc \
 && gcc /opt/mssql-tools/bin/sqlcmd.c -o /opt/mssql-tools/bin/sqlcmd
 
