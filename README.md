@@ -7,7 +7,7 @@
 
 |Tag|Product|Version|Release date|
 |--- |--- |--- |---|
-|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1565<br/>7.2.6<br/>21.1.18256<br/>0.1.1|2022-06-14<br>2022-08-11<br/>2021-07-14<br/>2022-07-24|
+|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1565<br/>7.2.8<br/>21.1.18256<br/>0.1.1|2022-06-14<br>2022-12-13<br/>2021-07-14<br/>2022-07-24|
 
 ## Usage
 
