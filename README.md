@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2023--01--09-blue)](https://hub.docker.com/repository/docker/cagrin/azure-sql-edge-arm64/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2023--02--09-blue)](https://hub.docker.com/repository/docker/cagrin/azure-sql-edge-arm64/tags)
 [![docker pulls](https://img.shields.io/docker/pulls/cagrin/azure-sql-edge-arm64)](https://hub.docker.com/repository/docker/cagrin/azure-sql-edge-arm64)
 
 ## Featured Tags
