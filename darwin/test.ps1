@@ -17,8 +17,8 @@ function Test-Image
     Invoke-Sqlcmd -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "$SA_PASSWORD" -Query "IF SERVERPROPERTY('Collation') <> '$Collation' RAISERROR ('Collation is invalid', 16, 1)"
 }
 
-Test-Image 'latest' '15.0.2000.1565' 'SQL_Latin1_General_CP1_CI_AS'
-Test-Image 'latest' '15.0.2000.1565' 'Polish_CI_AS'
+Test-Image 'latest' '15.0.2000.1574' 'SQL_Latin1_General_CP1_CI_AS'
+Test-Image 'latest' '15.0.2000.1574' 'Polish_CI_AS'
 
 docker container stop test_image
 docker container rm test_image
