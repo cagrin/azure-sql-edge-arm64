@@ -13,3 +13,8 @@ RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 RUN source ~/.bashrc
 ```
+
+## Update SqlServer module
+```
+Update-Module -Name SqlServer -RequiredVersion 22.0.59
+```
