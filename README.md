@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/docker%20last%20pushed-2023--04--16-blue)](https://hub.docker.com/repository/docker/cagrin/azure-sql-edge-arm64/tags)
+[![version](https://img.shields.io/badge/docker%20last%20pushed-2023--05--04-blue)](https://hub.docker.com/repository/docker/cagrin/azure-sql-edge-arm64/tags)
 [![docker pulls](https://img.shields.io/docker/pulls/cagrin/azure-sql-edge-arm64)](https://hub.docker.com/repository/docker/cagrin/azure-sql-edge-arm64)
 
 ## Featured Tags
@@ -7,7 +7,7 @@
 
 |Tag|Product|Version|Release date|
 |--- |--- |--- |---|
-|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1574<br/>7.3.4<br/>22.0.59<br/>0.1.1|2023-02-09<br>2023-04-12<br/>2023-04-04<br/>2022-07-24|
+|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1574<br/>7.3.4<br/>22.0.59<br/>0.2.0|2023-02-09<br>2023-04-12<br/>2023-04-04<br/>2023-05-04|
 
 ## Usage
 

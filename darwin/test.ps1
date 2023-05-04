@@ -15,6 +15,7 @@ function Test-Image
     Start-Sleep -Second 45
     Invoke-Sqlcmd -TrustServerCertificate -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "$SA_PASSWORD" -Query "IF SERVERPROPERTY('ProductVersion') <> '$ProductVersion' RAISERROR ('ProductVersion is invalid', 16, 1)"
     Invoke-Sqlcmd -TrustServerCertificate -ServerInstance "localhost,51433" -Database "master" -Username "sa" -Password "$SA_PASSWORD" -Query "IF SERVERPROPERTY('Collation') <> '$Collation' RAISERROR ('Collation is invalid', 16, 1)"
+    docker exec test_image /bin/bash -c "/opt/mssql-tools/bin/sqlcmd -t 60 -C -S 127.0.0.1,1433 -U sa -P $SA_PASSWORD -Q 'declare @r int; select @r = 1;'"
 }
 
 Test-Image 'latest' '15.0.2000.1574' 'SQL_Latin1_General_CP1_CI_AS'
