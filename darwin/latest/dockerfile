@@ -17,5 +17,5 @@ RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell
 && ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh \
 # https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15
 # https://www.powershellgallery.com/packages/SqlServer
-&& pwsh -Command Install-Module -Name SqlServer -RequiredVersion 22.0.59 -Force
+&& pwsh -Command Install-Module -Name SqlServer -RequiredVersion 22.1.1 -Force
 COPY --from=0 /opt/mssql-tools/bin/sqlcmd /opt/mssql-tools/bin/sqlcmd
