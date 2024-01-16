@@ -8,7 +8,7 @@
 
 |Tag|Product|Version|Release date|
 |--- |--- |--- |---|
-|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1574<br/>7.4.0<br/>22.1.1<br/>0.2.0|2023-02-09<br>2023-11-16<br/>2023-05-25<br/>2023-05-04|
+|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1574<br/>7.4.1<br/>22.1.1<br/>0.2.0|2023-02-09<br>2024-01-11<br/>2023-05-25<br/>2023-05-04|
 
 ## Usage
 
@@ -35,7 +35,7 @@ Requires the following environment flags:
 
 <sup>1)</sup> https://hub.docker.com/_/microsoft-azure-sql-edge
 
-<sup>2)</sup> https://learn.microsoft.com/en-us/powershell/scripting/install/install-other-linux?view=powershell-7.3#binary-archives
+<sup>2)</sup> https://learn.microsoft.com/en-us/powershell/scripting/install/install-other-linux?view=powershell-7.4#binary-archives
 
 <sup>3)</sup> https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15
 
