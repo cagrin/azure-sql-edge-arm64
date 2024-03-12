@@ -8,7 +8,7 @@
 
 |Tag|Product|Version|Release date|
 |--- |--- |--- |---|
-|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64|15.0.2000.1574<br/>7.4.1<br/>22.2.0<br/>0.2.0|2023-02-09<br>2024-01-11<br/>2024-01-16<br/>2023-05-04|
+|latest|Azure SQL Edge<br/>PowerShell<br/>SqlServer (module)<br/>sqlcmd-arm64<br/>mssql-tools18|15.0.2000.1574<br/>7.4.1<br/>22.2.0<br/>0.2.0<br/>18.2.1.1-1|2023-02-09<br>2024-01-11<br/>2024-01-16<br/>2023-05-04<br/>2023-02-10|
 
 ## Usage
 
@@ -26,6 +26,15 @@ inside ARM64 version of Azure SQL Edge container, tadam.
 ### Update - September 2023
 Following Microsoft's announcement<sup>5</sup>, Azure SQL Edge based on ARM64 architecture is retired. Alternatively, it is possible to run SQL 2017/2019/2022 and Azure SQL Edge AMD64 containers on Apple Silicon using Docker Desktop for macOS v4.16+.
 
+### Alternative ways - March 2024
+According to the article<sup>6</sup> "Install the SQL Server command-line tools sqlcmd and bcp on Linux" there are both ```x64``` and ```arm64``` architectures of ```sqlcmd``` and ```bcp```. These tools are bundled in the ```mssql-tools18``` package (not mssql-tools) and are installed on this image.
+
+Now you can use:
+* ```/opt/mssql-tools18/bin/sqlcmd```
+
+and
+* ```/opt/mssql-tools18/bin/bcp```
+
 ## Configuration
 Requires the following environment flags:
 - ```ACCEPT_EULA=Y```
@@ -42,3 +51,5 @@ Requires the following environment flags:
 <sup>4)</sup> https://github.com/cagrin/sqlcmd-arm64
 
 <sup>5)</sup> https://techcommunity.microsoft.com/t5/sql-server-blog/azure-sql-edge-update-september-2023/ba-p/3930827
+
+<sup>6)</sup> https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver16&tabs=ubuntu-install

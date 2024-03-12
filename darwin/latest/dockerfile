@@ -17,5 +17,8 @@ RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell
 && ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh \
 # https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15
 # https://www.powershellgallery.com/packages/SqlServer
-&& pwsh -Command Install-Module -Name SqlServer -RequiredVersion 22.2.0 -Force
+&& pwsh -Command Install-Module -Name SqlServer -RequiredVersion 22.2.0 -Force \
+# https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?tabs=ubuntu-install&view=sql-server-ver16#ubuntu
+&& curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list \
+&& apt update && ACCEPT_EULA=Y apt install -y mssql-tools18=18.2.1.1-1
 COPY --from=0 /opt/mssql-tools/bin/sqlcmd /opt/mssql-tools/bin/sqlcmd
