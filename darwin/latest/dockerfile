@@ -10,7 +10,7 @@ FROM mcr.microsoft.com/azure-sql-edge:1.0.7
 USER root
 # https://learn.microsoft.com/en-us/powershell/scripting/install/install-other-linux?view=powershell-7.4#binary-archives
 # https://github.com/PowerShell/PowerShell/releases
-RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell-7.4.1-linux-arm64.tar.gz \
+RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.4.2/powershell-7.4.2-linux-arm64.tar.gz \
 && mkdir -p /opt/microsoft/powershell/7 \
 && tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 \
 && chmod +x /opt/microsoft/powershell/7/pwsh \
@@ -19,6 +19,7 @@ RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell
 # https://www.powershellgallery.com/packages/SqlServer
 && pwsh -Command Install-Module -Name SqlServer -RequiredVersion 22.2.0 -Force \
 # https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?tabs=ubuntu-install&view=sql-server-ver16#ubuntu
+# https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/mssql-tools18/
 && curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list \
 && apt update && ACCEPT_EULA=Y apt install -y mssql-tools18=18.2.1.1-1
 COPY --from=0 /opt/mssql-tools/bin/sqlcmd /opt/mssql-tools/bin/sqlcmd
